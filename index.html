@@ -6,8 +6,23 @@
     <title> Stock Sentiment Predictor </title>
 </head>
 <body>
-    <h1>Welcome to the Stock Sentiment Predictor</h1>
-    <p> Enter a stock sumbol to begin...</p>
+    <body>
+  <h1>Welcome to the Stock Sentiment Predictor</h1>
+  <p>Enter a stock symbol to begin...</p>
+
+  <input type="text" id="stock-symbol" placeholder="e.g. AAPL">
+  <button onclick="checkSentiment()">Check Sentiment</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkSentiment() {
+      const symbol = document.getElementById('stock-symbol').value;
+      document.getElementById('result').innerText = `Checking sentiment for: ${symbol}`;
+    }
+  </script>
+</body>
+
     
 </body>
 </html>
